@@ -97,16 +97,16 @@ INSERT INTO [ORDER] (orderId, customerId, orderDate, status) VALUES
 (10, 10, '2023-10-09', 'Shipped');
 
 INSERT INTO OrderItem (orderItemId, orderId, bookId, quantity, totalPrice) VALUES
-(1, 1, 1, 5, 37),
-(2, 2, 2, 5, 38),
-(3, 3, 3, 5, 60),
-(4, 4, 4, 4, 85),
-(5, 5, 5, 2, 65),
-(6, 6, 6, 2, 65),
-(7, 7, 7, 2, 66),
-(8, 8, 8, 1, 81),
-(9, 9, 9, 4, 36),
-(10, 10, 10, 3, 91);
+(1, 1, 1, 5, 179.60),
+(2, 2, 2, 5, 51.45),
+(3, 3, 3, 5, 145.70),
+(4, 4, 4, 4, 145.80),
+(5, 5, 5, 2, 48.82),
+(6, 6, 6, 2, 44.50),
+(7, 7, 7, 2, 19.96),
+(8, 8, 8, 1, 44.56),
+(9, 9, 9, 4, 109.48),
+(10, 10, 10, 3, 28.62)
 
 INSERT INTO Review (reviewId, bookGroupId, customerId, rating, comment, reviewDate) VALUES
 (1, 2, 1, 3, 'Not my favorite, but still good.', '2023-07-24'),
@@ -1122,15 +1122,15 @@ INSERT INTO Employee (employeeId, name, email, phone, address, role) VALUES
 (9, 'Gabrielle Davis', 'gabrielle.davis@bookstore.com', '5773368624', '50983 Adrian Station, East Carloston, MA 09788', 'Staff'),
 (10, 'Ryan Munoz', 'ryan.munoz@bookstore.com', '5121696501', '738 Jennifer Ports Suite 376, North Collin, MI 56020', 'Staff');
 
-INSERT INTO Account (accountId, personalId, accountName, password) VALUES
-(1, 1, 'allisonhill', 'bd239751f6ca76359d663dcfc4fd5f81f06447891713f5c882923321e01b3bdc'),
-(2, 2, 'noahrhodes', 'c24e18aba8821949893140465c38f8b4f6953d2f85df91cafe432a791424ff04'),
-(3, 3, 'angiehenderson', '666f3cfc6437b7a377d04c1b62f7a57f2e0c81528ac3b7942087840c80bae2e6'),
-(4, 4, 'danielwagner', 'b8357af226caf3ac75f5b586c60f3372f09c1c0ebe1c1e5d9f96d65dab15c9b6'),
-(5, 5, 'cristiansantos', '832d1e767a001afea7ae988a75b037ab3ed90f3e528fffe0a8ac276fb979af6a'),
-(6, 6, 'connielawrence', 'c49a8ee9a4d18a8704d98edf5b01668e12a50b61c2d18868e57344d57e63990b'),
-(7, 7, 'abigailshaffer', '8ffb51544fe27d8dd726863d0592ab529317df5a67adaf84d5dff219873cc51a'),
-(8, 8, 'ginamoore', '0468b044aeda473a33b6dff8f2530c80112925692ef898da1a356f62db23af41'),
-(9, 9, 'gabrielledavis', 'b8beda52dcbbbfc7247464125f7610cf8225bd8a33c286eec182d108a5b9c7ff'),
-(10, 10, 'ryanmunoz', '6cafa5ee2725585c620d37e87f6064429d316a68cd92292516ab295d3a9d5a83');
+INSERT INTO Account (accountId, customerId, employeeId, accountName, password) VALUES
+(1, 1, NULL, 'allisonhill', 'bd239751f6ca76359d663dcfc4fd5f81f06447891713f5c882923321e01b3bdc'),
+(2, 2, NULL, 'noahrhodes', 'c24e18aba8821949893140465c38f8b4f6953d2f85df91cafe432a791424ff04'),
+(3, 3, NULL, 'angiehenderson', '666f3cfc6437b7a377d04c1b62f7a57f2e0c81528ac3b7942087840c80bae2e6'),
+(4, 4, NULL, 'danielwagner', 'b8357af226caf3ac75f5b586c60f3372f09c1c0ebe1c1e5d9f96d65dab15c9b6'),
+(5, 5, NULL, 'cristiansantos', '832d1e767a001afea7ae988a75b037ab3ed90f3e528fffe0a8ac276fb979af6a'),
+(6, NULL, 6, 'connielawrence', 'c49a8ee9a4d18a8704d98edf5b01668e12a50b61c2d18868e57344d57e63990b'),
+(7, NULL, 7, 'abigailshaffer', '8ffb51544fe27d8dd726863d0592ab529317df5a67adaf84d5dff219873cc51a'),
+(8, NULL, 8, 'ginamoore', '0468b044aeda473a33b6dff8f2530c80112925692ef898da1a356f62db23af41'),
+(9, NULL, 9, 'gabrielledavis', 'b8beda52dcbbbfc7247464125f7610cf8225bd8a33c286eec182d108a5b9c7ff'),
+(10, NULL, 10, 'ryanmunoz', '6cafa5ee2725585c620d37e87f6064429d316a68cd92292516ab295d3a9d5a83');
 

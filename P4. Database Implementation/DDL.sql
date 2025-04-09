@@ -70,7 +70,7 @@ CREATE TABLE OrderItem (
     orderId BIGINT,
     bookId BIGINT,
     quantity INT,
-    totalPrice INT,
+    totalPrice DECIMAL(10,2),
     FOREIGN KEY (orderId) REFERENCES [Order](orderId),
     FOREIGN KEY (bookId) REFERENCES Book(bookId)
 );
@@ -100,9 +100,10 @@ CREATE TABLE Employee (
 -- Account Table
 CREATE TABLE Account (
     accountId BIGINT PRIMARY KEY,
-    personalId BIGINT,
+    employeeId BIGINT,
+    customerId BIGINT,
     accountName VARCHAR(45),
     password VARCHAR(255),
-    FOREIGN KEY (personalId) REFERENCES Employee(employeeId),
-    FOREIGN KEY (personalId) REFERENCES Customer(customerId)
+    FOREIGN KEY (employeeId) REFERENCES Employee(employeeId),
+    FOREIGN KEY (customerId) REFERENCES Customer(customerId)
 );

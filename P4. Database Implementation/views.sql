@@ -30,14 +30,14 @@ SELECT
     c.name AS customerName,
     a.accountName,
     r.reviewId,
-    r.bookgroupId,
+    r.bookGroupId,
     r.rating,
     r.comment,
     r.reviewDate
 FROM
     Customer c
 JOIN
-    Account a ON c.customerId = a.accountId
+    Account a ON c.customerId = a.customerId
 LEFT JOIN
     Review r ON c.customerId = r.customerId;
 
